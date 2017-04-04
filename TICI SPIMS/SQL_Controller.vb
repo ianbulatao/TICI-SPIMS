@@ -2,9 +2,9 @@
 Imports System.Data.SqlClient
 Module SQL_Controller
     Dim connectionString As String = "DRIVER={MySQL ODBC 3.51 Driver};" &
-     "SERVER=192.168.1.39;" &
+     "SERVER=localhost;" &
      "DATABASE=spimsdb;" &
-     "UID=rooter;Pwd=alpha;"
+     "UID=root;Pwd=;"
     Public conn As New OdbcConnection(connectionString)
     Public cmd As New OdbcCommand
     Public sql As String

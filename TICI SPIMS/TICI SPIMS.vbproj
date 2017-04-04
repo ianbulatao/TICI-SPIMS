@@ -78,6 +78,12 @@
     <Compile Include="AdminMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Cashier_form.Designer.vb">
+      <DependentUpon>Cashier_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cashier_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EmployeeMgmt.Designer.vb">
       <DependentUpon>EmployeeMgmt.vb</DependentUpon>
     </Compile>
@@ -132,6 +138,7 @@
     <Compile Include="PatientRecords.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Patient_Directory.Designer.vb" />
     <Compile Include="spimsdbDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +149,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cashier_form.resx">
+      <DependentUpon>Cashier_form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeMgmt.resx">
       <DependentUpon>EmployeeMgmt.vb</DependentUpon>
@@ -167,6 +177,7 @@
     <EmbeddedResource Include="PatientRecords.resx">
       <DependentUpon>PatientRecords.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patient_Directory.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
