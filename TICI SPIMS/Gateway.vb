@@ -20,7 +20,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If resx.Contains("a") Or resx.Contains("c") Then
             'Go
-            MsgBox("entered")
+            Cashier_form.Show()
         Else
             MsgBox("You do not have the permission to access this area!", MsgBoxStyle.Critical)
         End If
