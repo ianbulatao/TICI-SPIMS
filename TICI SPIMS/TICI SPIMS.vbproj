@@ -90,7 +90,6 @@
     <Compile Include="EmployeeMgmt.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Encryption.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -138,13 +137,13 @@
     <Compile Include="PatientRecords.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patient_Directory.Designer.vb" />
     <Compile Include="spimsdbDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>spimsdbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SQL_Controller.vb" />
+    <Compile Include="Xencrypt.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AdminMenu.resx">
@@ -177,7 +176,6 @@
     <EmbeddedResource Include="PatientRecords.resx">
       <DependentUpon>PatientRecords.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient_Directory.resx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
