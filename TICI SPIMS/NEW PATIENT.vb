@@ -193,4 +193,8 @@
         End Try
         Return False
     End Function
+
+    Private Sub NEW_PATIENT_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        LoginForm1.Show()
+    End Sub
 End Class
