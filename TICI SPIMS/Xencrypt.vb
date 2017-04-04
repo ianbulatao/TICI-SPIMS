@@ -1,7 +1,6 @@
-﻿
-Imports System.Security.Cryptography
+﻿Imports System.Security.Cryptography
 Imports System.Text
-Module Encryption
+Public Module Xencrypt
     Public Function AES_Encrypt(ByVal input As String, ByVal pass As String) As String
         'ENCRYPTS THE STRING WITH AES
         Dim AES As New System.Security.Cryptography.RijndaelManaged
@@ -23,10 +22,10 @@ Module Encryption
 
         End Try
     End Function
-    Function CONSUME(ByVal str As String)
+    Function xenc(ByVal str As String)
         Return AES_Encrypt(str, "ETtEYzeqE4zBxfkJ4qu+3quAz2pQiLF4AbxlCcy8P6M=")
     End Function
-    Function SPIT(ByVal str As String)
+    Function xdec(ByVal str As String)
         Return AES_Decrypt(str, "ETtEYzeqE4zBxfkJ4qu+3quAz2pQiLF4AbxlCcy8P6M=")
     End Function
 

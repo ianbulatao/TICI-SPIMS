@@ -24,6 +24,8 @@ Partial Class NEW_PATIENT
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(NEW_PATIENT))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txtCaseNo = New System.Windows.Forms.TextBox()
         Me.txtPtype = New System.Windows.Forms.ComboBox()
         Me.txtSex = New System.Windows.Forms.ComboBox()
         Me.txtCstat = New System.Windows.Forms.ComboBox()
@@ -64,8 +66,6 @@ Partial Class NEW_PATIENT
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
-        Me.txtCaseNo = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -96,6 +96,25 @@ Partial Class NEW_PATIENT
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "PATIENT PRIMARY INFORMATION"
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(491, 181)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(50, 13)
+        Me.Label16.TabIndex = 10
+        Me.Label16.Text = "CASE NO"
+        '
+        'txtCaseNo
+        '
+        Me.txtCaseNo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCaseNo.Location = New System.Drawing.Point(426, 149)
+        Me.txtCaseNo.Name = "txtCaseNo"
+        Me.txtCaseNo.Size = New System.Drawing.Size(197, 29)
+        Me.txtCaseNo.TabIndex = 9
+        Me.txtCaseNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPtype
         '
@@ -521,25 +540,6 @@ Partial Class NEW_PATIENT
         Me.btnReset.TabIndex = 30
         Me.btnReset.Text = "RESET"
         Me.btnReset.UseVisualStyleBackColor = False
-        '
-        'txtCaseNo
-        '
-        Me.txtCaseNo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCaseNo.Location = New System.Drawing.Point(426, 149)
-        Me.txtCaseNo.Name = "txtCaseNo"
-        Me.txtCaseNo.Size = New System.Drawing.Size(197, 29)
-        Me.txtCaseNo.TabIndex = 9
-        Me.txtCaseNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(419, 181)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(50, 13)
-        Me.Label16.TabIndex = 10
-        Me.Label16.Text = "CASE NO"
         '
         'NEW_PATIENT
         '
