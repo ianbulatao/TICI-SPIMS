@@ -25,7 +25,6 @@
     Dim emname As String = "-"
     Dim emcontact As String = "-"
     Dim hmo As String = "-"
-    Dim hmoid As String = "-"
 
     Private Sub NEW_PATIENT_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -48,6 +47,9 @@
         txtOcc.Clear()
         txtAll.Clear()
         txtCaseNo.Clear()
+        txtEmName.Clear()
+        txtEmNo.Clear()
+        txtHmo.Clear()
 
         chkImplant.Checked = False
         chkClaustro.Checked = False
@@ -55,12 +57,12 @@
 
     Private Sub btnADD_Click(sender As Object, e As EventArgs) Handles btnADD.Click
         If transport() Then
-            'GET LAST ID
-            Dim newID As String = ((Convert.ToInt32(Date.Now.ToString("yyyy")) * 10000) + Convert.ToInt32(getLastId))
+
+
             Dim dateNow As String = Date.Now.ToString
             'FIX THIS
             Dim qry As String = "INSERT INTO" &
-                " PATIENT(PT_CASE_NO,PT_LN,PT_FN,PT_MN,PT_DOB,PT_CSTAT,PT_SEX,PT_CONTACT_NO,PT_TYPE,PT_BRGY,PT_CITY,PT_PROV,PT_OCC,PT_ALLERGY,PT_IMPLANT,PT_CLAUSTRO,PT_ENAME,PT_ECONTACT,PT_HMO,PT_HMO_ID,PT_LAST_UPDATE,ROW_LOCK) VALUES( '" & caseNo &
+                " PATIENT(PT_CASE_NO,PT_LN,PT_FN,PT_MN,PT_DOB,PT_CSTAT,PT_SEX,PT_CONTACT_NO,PT_TYPE,PT_BRGY,PT_CITY,PT_PROV,PT_OCC,PT_ALLERGY,PT_IMPLANT,PT_CLAUSTRO,PT_ENAME,PT_ECONTACT,PT_HMO,PT_LAST_UPDATE,ROW_LOCK) VALUES( '" & caseNo &
                 "', '" & lname &
                 "','" & fname &
                 "','" & mname &
@@ -79,7 +81,6 @@
                 "','" & xenc(emname) &
                 "','" & xenc(emcontact) &
                 "','" & xenc(hmo) &
-                "','" & xenc(hmoid) &
                 "','" & dateNow &
                 "','" & "-" &
                 "')"
@@ -95,25 +96,28 @@
         'CHECKS IF THE CORE INFOS ARE ENTERED
         If (txtLname.Text <> "") And (txtFname.Text <> "") And (txtCaseNo.Text <> "") Then
 
-            lname = txtLname.Text
-            fname = txtFname.Text
-            mname = txtMname.Text
-            dob = txtDob.Text
+            lname = txtLname.Text.ToUpper
+            fname = txtFname.Text.ToUpper
+            mname = txtMname.Text.ToUpper
+            dob = txtDob.Text.ToUpper
             contactNo = txtContactNo.Text
             cstat = txtCstat.Text
             sex = txtSex.Text
             ptype = txtPtype.Text
             caseNo = txtCaseNo.Text
 
-            brgy = txtBrgy.Text
-            city = txtCity.Text
-            prov = txtProv.Text
-            occ = txtOcc.Text
+            brgy = txtBrgy.Text.ToUpper
+            city = txtCity.Text.ToUpper
+            prov = txtProv.Text.ToUpper
+            occ = txtOcc.Text.ToUpper
+            emname = txtEmName.Text.ToUpper
+            emcontact = txtEmNo.Text
+            hmo = txtHmo.Text
             'VERIFY IF CASE NUMBER EXIST ALREADY BEFORE PROCEEDING
             If checkIfCaseExists(caseNo) Then
 
                 If txtAll.Text <> "" Then
-                    allergy = txtAll.Text
+                    allergy = txtAll.Text.ToUpper
                 End If
                 If chkClaustro.CheckState = True Then
                     claustro = "YES"
@@ -139,30 +143,7 @@
         End If
 
     End Function
-    Function getLastId() As String
-        Try
-            conn.Open()
-            cmd = conn.CreateCommand
-            sql = "select count(*) + 1 as ct from PATIENT"
-            cmd = conn.CreateCommand
-            cmd.CommandText = sql
-            readers = cmd.ExecuteReader
-            Try
-                While readers.Read
-                    Return readers("ct").ToString
-                End While
-            Catch ex As Exception
-                MsgBox("Error in retrieving user information" & vbNewLine & ex.Message)
-            Finally
-                readers.Close()
-            End Try
-        Catch ex As Exception
-            MsgBox("Error in retrieving user information" & vbNewLine & ex.Message)
-        Finally
-            conn.Close()
-        End Try
 
-    End Function
     Function checkIfCaseExists(ByVal caseno As String) As Boolean
         Try
             Dim n As String = "none"

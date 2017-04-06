@@ -137,12 +137,24 @@
     <Compile Include="PatientRecords.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Patient_Directory.Designer.vb">
+      <DependentUpon>Patient_Directory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Patient_Directory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="spimsdbDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>spimsdbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SQL_Controller.vb" />
+    <Compile Include="Visit_Viewer.Designer.vb">
+      <DependentUpon>Visit_Viewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Visit_Viewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Xencrypt.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +187,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PatientRecords.resx">
       <DependentUpon>PatientRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient_Directory.resx">
+      <DependentUpon>Patient_Directory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visit_Viewer.resx">
+      <DependentUpon>Visit_Viewer.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

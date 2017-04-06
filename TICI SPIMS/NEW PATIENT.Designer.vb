@@ -56,8 +56,6 @@ Partial Class NEW_PATIENT
         Me.txtHmo = New System.Windows.Forms.TextBox()
         Me.txtEmNo = New System.Windows.Forms.TextBox()
         Me.txtEmName = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtHmoID = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -388,15 +386,13 @@ Partial Class NEW_PATIENT
         Me.GroupBox3.Controls.Add(Me.txtHmo)
         Me.GroupBox3.Controls.Add(Me.txtEmNo)
         Me.GroupBox3.Controls.Add(Me.txtEmName)
-        Me.GroupBox3.Controls.Add(Me.Label14)
-        Me.GroupBox3.Controls.Add(Me.txtHmoID)
         Me.GroupBox3.Controls.Add(Me.Label15)
         Me.GroupBox3.Controls.Add(Me.Label13)
         Me.GroupBox3.Controls.Add(Me.Label12)
         Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.GroupBox3.Location = New System.Drawing.Point(388, 269)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(296, 213)
+        Me.GroupBox3.Size = New System.Drawing.Size(296, 181)
         Me.GroupBox3.TabIndex = 0
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "PATIENT SECONDARY INFORMATION"
@@ -427,25 +423,6 @@ Partial Class NEW_PATIENT
         Me.txtEmName.Size = New System.Drawing.Size(197, 29)
         Me.txtEmName.TabIndex = 17
         Me.txtEmName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(10, 158)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(46, 13)
-        Me.Label14.TabIndex = 8
-        Me.Label14.Text = "HMO ID"
-        '
-        'txtHmoID
-        '
-        Me.txtHmoID.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHmoID.Location = New System.Drawing.Point(43, 174)
-        Me.txtHmoID.Name = "txtHmoID"
-        Me.txtHmoID.Size = New System.Drawing.Size(197, 29)
-        Me.txtHmoID.TabIndex = 20
-        Me.txtHmoID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label15
         '
@@ -483,7 +460,7 @@ Partial Class NEW_PATIENT
         Me.btnADD.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnADD.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnADD.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnADD.Location = New System.Drawing.Point(527, 488)
+        Me.btnADD.Location = New System.Drawing.Point(527, 473)
         Me.btnADD.Name = "btnADD"
         Me.btnADD.Size = New System.Drawing.Size(157, 66)
         Me.btnADD.TabIndex = 21
@@ -534,7 +511,7 @@ Partial Class NEW_PATIENT
         Me.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnReset.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnReset.Location = New System.Drawing.Point(390, 488)
+        Me.btnReset.Location = New System.Drawing.Point(390, 473)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(129, 66)
         Me.btnReset.TabIndex = 30
@@ -606,8 +583,6 @@ Partial Class NEW_PATIENT
     Friend WithEvents txtHmo As TextBox
     Friend WithEvents txtEmNo As TextBox
     Friend WithEvents txtEmName As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents txtHmoID As TextBox
     Friend WithEvents Label15 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
