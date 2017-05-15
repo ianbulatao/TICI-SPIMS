@@ -1,10 +1,30 @@
-﻿Imports System.Data.Odbc
+﻿'*********************************************************************************************
+'READ FIRST
+'THIS CODE SNIPPET WAS DERIVED FROM EXISTENCE INNOVATIVE TECHNOLOGIES'S DATABASE
+'COMMUNICATION API, THE XDBCON. THIS CODE SNIPPET IS FREE TO DISTRIBUTE AND SHARE BUT MUST BE
+'ATTRIBUTED TO THE ORIGINAL DEVELOPERS.
+'
+'███████╗██╗  ██╗███████╗   FOUNDED BY: ROMEO MANUEL E. DAVID
+'██╔════╝╚██╗██╔╝██╔════╝   XDBCON API Developed, Updated and Maintained by:
+'█████╗   ╚███╔╝ ███████╗       -Romeo Manuel David
+'██╔══╝   ██╔██╗ ╚════██║       -Raniel Garcia
+'███████╗██╔╝ ██╗███████║       -John Christian Viray
+'╚══════╝╚═╝  ╚═╝╚══════╝
+'___________________________________________________________________________
+'____  ____________________________________________________________________
+'__| |/ /__  __ \__  __ )_  ____/_  __ \__  | / /______    |__  __ \___  _/
+'__|   /__  / / /_  __  |  /    _  / / /_   |/ /______  /| |_  /_/ /__  /  
+'_/   | _  /_/ /_  /_/ // /___  / /_/ /_  /|  /______  ___ |  ____/__/ /   
+'/_/|_| /_____/ /_____/ \____/  \____/ /_/ |_/      /_/  |_/_/     /___/   
+'___________________________________________________________________________ 
+'*********************************************************************************************
+Imports System.Data.Odbc
 Imports System.Data.SqlClient
 Module SQL_Controller
     Dim connectionString As String = "DRIVER={MySQL ODBC 3.51 Driver};" &
-     "SERVER=192.168.1.39;" &
+     "SERVER=localhost;" &
      "DATABASE=spimsdb;" &
-     "UID=rooter;Pwd=alpha;"
+     "UID=root;Pwd=;"
     Public conn As New OdbcConnection(connectionString)
     Public cmd As New OdbcCommand
     Public sql As String

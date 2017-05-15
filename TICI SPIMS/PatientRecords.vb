@@ -9,6 +9,13 @@
 
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        NEW_PATIENT.Show()
+        Me.Hide()
+    End Sub
 
-
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Patient_Directory.Show()
+        Me.Hide()
+    End Sub
 End Class

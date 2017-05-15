@@ -4,7 +4,8 @@
     End Sub
 
     Private Sub Gateway_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LoginForm1.UsernameTextBox.Clear()
+        LoginForm1.PasswordTextBox.Clear()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -20,7 +21,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If resx.Contains("a") Or resx.Contains("c") Then
             'Go
-            MsgBox("entered")
+            Cashier_form.Show()
         Else
             MsgBox("You do not have the permission to access this area!", MsgBoxStyle.Critical)
         End If
